@@ -7,7 +7,7 @@
 	<block wx:for="{{nodeList}}" wx:for-item="node" wx:key="index">
 		<view class="editor-node-wrapper {{cur==index?'cur':''}} {{isView?'is-view':''}}">
 			<textarea disabled="{{isView}}" id="editor-node-{{index}}" wx:if="{{node.type==='text'}}" auto-height="true" cursor-spacing="60" bindinput="bindTextareaInput" class="editor-textarea" data-idx="{{index}}" maxlength="-1" value="{{node.val}}"></textarea>
-			<image bindtap="url" data-type="image" data-url="{{node.val}}"  id="editor-node-{{index}}" wx:if="{{node.type==='img'}}" mode="widthFix" class="loading editor-image" src="{{node.val}}" lazy-load="true"></image>
+			<image bindtap="url"    data-type="image" data-url="{{node.val}}"  id="editor-node-{{index}}" wx:if="{{node.type==='img'}}" mode="widthFix" class="loading editor-image" src="{{node.val}}" lazy-load="true"></image>
 
 			<view class="editor-delete" wx:if="{{!isView}}">
 				<!--<view bindtap="bindTopTap" class="iconfont icon-top" data-idx="{{index}}" wx:if="{{index>1}}"></view>-->
